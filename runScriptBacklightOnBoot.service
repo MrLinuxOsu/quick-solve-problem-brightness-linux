@@ -1,0 +1,9 @@
+[Unit]
+Description=run brightness script fix on boot
+
+[Service]
+Type=forking
+ExecStart=sh /usr/local/sbin/script.sh &
+
+[Install]
+WantedBy=multi-user.target
