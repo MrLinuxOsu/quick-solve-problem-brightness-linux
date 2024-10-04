@@ -1,0 +1,1 @@
+until false; do if [ $(cat /sys/class/backlight/nvidia_*/brightness) != $(cat /sys/class/backlight/amdgpu_bl*/brightness) ]; then cat /sys/class/backlight/nvidia_*/brightness > /sys/class/backlight/amdgpu_bl*/brightness; fi ; sleep 0.1; done
